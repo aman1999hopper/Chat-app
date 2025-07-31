@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
+from chat.views import ask_ai
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('chat.urls')),
+    path('api/ask', ask_ai),
+
 ]

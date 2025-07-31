@@ -1,11 +1,11 @@
-# Create your models here.
-from django.db import models
+from mongoengine import Document, StringField, DateTimeField
+from datetime import datetime
 
-class Message(models.Model):
-    username = models.CharField(max_length=255)
-    room = models.CharField(max_length=255)
-    content = models.TextField()
-    timestamp = models.DateTimeField(auto_now_add=True)
+class ChatMessage(Document):
+    username = StringField(required=True)
+    message = StringField(required=True)
+    timestamp = DateTimeField(default=datetime.utcnow)
 
-    def __str__(self):
-        return f"{self.username} - {self.room}: {self.content[:30]}"
+    meta = {
+        'collection': 'chat_messages'  # optional name for MongoDB collection
+    }
