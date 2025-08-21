@@ -1,17 +1,28 @@
-# Ignore Python virtual environment
-venv/
+# ignore the node_modules directory
+node_modules/
 
-# Byte-compiled / cache files
-__pycache__/
-*.py[cod]
-*$py.class
+# ignore the build directory
+build/
 
-# Django stuff:
-*.sqlite3
-db.sqlite3
-
-# Environment variables
-.env
-
-# Logs
+# ignore log files
 *.log
+# ignore environment variables file
+.env    
+# ignore the package-lock.json file
+package-lock.json
+# ignore the dist directory
+dist/
+# ignore the coverage directory
+coverage/
+# ignore the .DS_Store file
+.DS_Store
+# ignore the .env file
+.env.local
+# ignore the .env.development file
+.env.development
+# ignore the .env.test file
+.env.test
+# ignore the .env.production file
+.env.production
+# ignore the .vscode directory
+.vscode/
